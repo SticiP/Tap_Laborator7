@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="app.tap_laborator7.MainController">
+<top>
+  <HBox spacing="10" style="-fx-padding: 10px;">
+    <Button text="Execute" onAction="#handleExecute"/>
+    <Button text="Help" onAction="#handleHelp"/>
+  </HBox>
+</top>
+<center>
+  <HBox spacing="5" alignment="BOTTOM_LEFT">
+    <VBox fx:id="PolynomOne" spacing="5">
+      <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+      </padding>
+      <Label text="Polynom 1" />
+      <Button text="Add Term" onAction="#handleAddTermOne"/>
+    </VBox>
+    <VBox fx:id="PolynomTwo" spacing="5">
+      <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+      </padding>
+      <Label text="Polynom 2" />
+      <Button text="Add Term" onAction="#handleAddTermTwo"/>
+    </VBox>
+  </HBox>
+</center>
+  <bottom>
+    <HBox spacing="10" style="-fx-padding: 10px;">
+      <Label fx:id="resultLabel"/>
+    </HBox>
+  </bottom>
+</BorderPane>
